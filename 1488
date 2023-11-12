@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstdlib> // Для использования функции rand()
+#include <ctime>   // Для использования функции time()
+
+int main() {
+    // Установим seed для генератора случайных чисел, используя текущее время
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    // Генерируем и выводим 10 случайных чисел
+    for (int i = 0; i < 10; ++i) {
+        int random_number = std::rand();
+        std::cout << "Случайное число " << i + 1 << ": " << random_number << std::endl;
+    }
+
+    return 0;
+}
